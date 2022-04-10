@@ -10,7 +10,7 @@ env:
   SHA: ${{ github.sha }}
   AWS_ECR_ACCESS_KEY: ${{ secrets.AWS_ZIGZAG_ALPHA_ECR_ACCESS_KEY }}
   AWS_ECR_SECRET_KEY: ${{ secrets.AWS_ZIGZAG_ALPHA_ECR_SECRET_KEY }}
-  ECR_REPOSITORY: 'nestjs'
+  ECR_REPOSITORY: 'comento-pt-nestjs'
 
 jobs:
   test:
