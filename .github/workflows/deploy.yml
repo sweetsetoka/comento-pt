@@ -74,8 +74,6 @@ jobs:
     name: deploy ecs
     runs-on: ubuntu-20.04
     needs: build
-    env:
-      IMAGE: ${{ needs.build.outputs.image }}
 
     steps:
       - name: Checkout
@@ -87,7 +85,7 @@ jobs:
         with:
           task-definition: task-definition.json
           container-name: nestjs
-          image: ${{ env.IMAGE }}
+          image: ${{ needs.build.outputs.image }}
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
