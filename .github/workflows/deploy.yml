@@ -7,7 +7,7 @@ on:
 
 env:
   SHA: ${{ github.sha }}
-  ECR_REPOSITORY: 'comento-pt'
+  ECR_REPOSITORY: 'comento-pt-nestjs'
 
 jobs:
   test:
